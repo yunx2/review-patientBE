@@ -1,6 +1,7 @@
 import { Patient } from '../src/types';
+import { createNewPatient } from '../src/typeChecking';
 
-const patientData: Patient[] =
+const data =
 [
   {
       "id": "d2773336-f723-11e9-8f0b-362b9e155667",
@@ -43,5 +44,9 @@ const patientData: Patient[] =
       "occupation": "Digital evangelist"
   }
 ];
-
-export default patientData;
+const patients: Patient[] = data.map(val => {
+  const patient = createNewPatient(val) as Patient;
+  patient.id = val.id;
+  return patient;
+});
+export default patients;
