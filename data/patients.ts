@@ -44,9 +44,11 @@ const data =
       "occupation": "Digital evangelist"
   }
 ];
+
 const patients: Patient[] = data.map(val => {
   const patient = createNewPatient(val) as Patient;
   patient.id = val.id;
   return patient;
 });
+
 export default patients;

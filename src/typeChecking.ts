@@ -58,12 +58,14 @@ const parseGender = (gender: any): Gender => {
 };
 // this function accepts the request body data and returns an object of type NewPatientData if all the fields parse correctly
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const createNewPatient = (reqBody: any): NewPatientData => {
   return {
     name: parseName(reqBody.name),
     dateOfBirth: parseDate(reqBody.dateOfBirth),
     ssn: parseSSN(reqBody.ssn),
     gender: parseGender(reqBody.gender),
-    occupation: parseOccupation(reqBody.occupation)
+    occupation: parseOccupation(reqBody.occupation),
+    entries: []
   };
 };
