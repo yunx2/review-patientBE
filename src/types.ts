@@ -3,7 +3,7 @@ interface BaseEntry {
   description: string;
   date: string;
   specialist: string;
-  diagnosisCodes?: Array<Diagnosis['code']>; // array of Diagnosis objects, specifically the 'code field'
+  diagnosisCodes?: Array<Diagnosis['code']>; // array of Diagnosis codes 
 }
 
 enum HealthCheckRating {
