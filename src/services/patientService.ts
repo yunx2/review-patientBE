@@ -1,4 +1,4 @@
-import patients from '../../data/patients';
+import patients from '../../data/patientData';
 import { PublicViewPatient, NewPatientData, Patient } from '../types';
 
 // function is given a NewPatientData type object, assigns an id, then returns an objecct of ttype Patient 
