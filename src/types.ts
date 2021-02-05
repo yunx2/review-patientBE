@@ -34,7 +34,7 @@ interface Discharge {
 }
 
 interface HospitalEntry extends BaseEntry {
-  type: 'Hospital'
+  type: 'Hospital';
   discharge: Discharge;
 }
 
